@@ -71,9 +71,10 @@
             fillOpacity: 0.8
           });
         },
-        onEachFeature: function(feature, layer) {
+      onEachFeature: function(feature, layer) {
           layer.on('click', function(e) {
-            alert("Zone: " + feature.properties.NAME_ENGLI + "\nMAIL_CODE: " + feature.properties.MAIL_CODE);
+            // Display library name in English using the "NAME_ENGLI" property
+            alert("Library: " + feature.properties.NAME_ENGLI);
           });
         }
       }).addTo(map);
